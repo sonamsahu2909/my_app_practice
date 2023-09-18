@@ -1,3 +1,7 @@
+// value return k use krte h usememo
+// memoisevalue ko store kr raha h
+// usememo return a memoized value
+// usememo hook only runwhen one of its dependencies update
 import React, { useState, useMemo } from "react";
 
 function UseMemo() {

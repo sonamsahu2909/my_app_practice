@@ -35,6 +35,16 @@ import SendDataChild from "./Component/hooks/SendDataChild";
 import UseMemo from "./Component/hooks/UseMemo";
 import UseRef from "./Component/hooks/UseRef";
 import ForwardRef from "./Component/hooks/ForwardRef";
+import { useRef } from "react";
+import User from "./Component/curd/User";
+import Display from "./Component/curd/Display";
+import ControlComponent from "./Component/hooks/ControlComponent";
+import UnControlComponent from "./Component/hooks/UnControlComponent";
+import UseCallBack from "./Component/hooks/UseCallBack";
+import UseReducer from "./Component/hooks/UseReducer";
+import B from "./Component/hooks/context/B";
+// import A from "./Component/hooks/context/A";
+import UseContext from "./Component/hooks/context/UseContext";
 
 function App() {
 
@@ -53,9 +63,18 @@ function App() {
   //   }
   //  ]
 
-  function parent(data){
-    alert(data.name)
+  // function parent(data){
+  //   alert(data.name)
+  // }
+  
+
+  let inputRef = useRef()
+  function updateInput(){
+    inputRef.current.value = '1000'
+    inputRef.current.style.color = 'red'
   }
+
+
   
   return (
     <>
@@ -94,9 +113,19 @@ function App() {
       {/* <SendDataChild alert={parent}/> */}
       {/* <UseMemo/> */}
       {/* <UseRef/> */}
-      <ForwardRef/>
+      {/* <ForwardRef ref = {inputRef} />
+      <button onClick={updateInput}>update input box</button>
+       */}
 
-
+       {/* <User/> */}
+       {/* <Display/> */}
+       {/* <ControlComponent/> */}
+       {/* <UnControlComponent/> */}
+       {/* <UseCallBack/> */}
+       {/* <UseReducer/> */}
+       {/* <A/> */}
+       <UseContext/>
+       
       
       {/* <Routes>
         <Route path="/" element={<Home/>} />
